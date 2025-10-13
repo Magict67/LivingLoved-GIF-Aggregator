@@ -1,0 +1,1 @@
+const GIPHY_API_KEY = UVBmEU4lOuwzYVfQEP5Oal9XcyRfdXSs;
