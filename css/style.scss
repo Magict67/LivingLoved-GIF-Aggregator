@@ -29,3 +29,24 @@ h1, h2 {
     margin-top: 40px;
     letter-spacing: 0.5px;
 }
+
+h1 {
+    font-size: 2.2em;
+    color: $secondary-color;
+}
+
+h2 {
+    font-size: 1.5em;
+    color: $primary-color;
+    border-bottom: 2px solid $border-color;
+    padding-bottom: 10px;
+}
+/*This should be a cool hovering nesting feature of SASS, fingers crossed*/
+a {
+    color: $accent-color;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    &:hover {
+        color: darken($accent-color, 15%); 
+        text-decoration: underline;
+    }
