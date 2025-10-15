@@ -6,3 +6,12 @@ $secondary-color: #a0c9c5; //old H1
 $accent-color: #6d6ba5;
 $border-color: #5a8c88;
 $background-color: #eef2f5;
+/* Foundational or Base styles to keep everything looking the same*/
+body {
+    font-family: 'Montserrat', Arial, sans-seriff; /* New Font requirement*/
+    line-height: 1.6;
+    color: #34495e;
+    background-color: $background-color;
+    margin: 0;
+    padding: 0;
+}

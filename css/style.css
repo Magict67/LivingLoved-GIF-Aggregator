@@ -1,3 +1,12 @@
 /* Practice commenting stuff*/
 /*Pulling some colors and formatting from my 1st project so I have some continuity as the whole thing comes together*/
-/*These are SASS Variables, 'Across board'*//*# sourceMappingURL=style.css.map */
+/*These are SASS Variables, 'Across board'*/
+/* Foundational or Base styles to keep everything looking the same*/
+body {
+  font-family: "Montserrat", Arial, sans-seriff; /* New Font requirement*/
+  line-height: 1.6;
+  color: #34495e;
+  background-color: #eef2f5;
+  margin: 0;
+  padding: 0;
+}/*# sourceMappingURL=style.css.map */
