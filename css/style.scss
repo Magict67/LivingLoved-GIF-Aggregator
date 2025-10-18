@@ -47,11 +47,12 @@ a {
     text-decoration: none;
     transition: color 0.3s ease;
 }
-ßß
-&:hover {
-    color: darken($accent-color, 15%); 
-    text-decoration: underline;
-}
+/*make sure hover rule is nested inside 'a' rule*/
+    &:hover {
+        color: darken($accent-color, 15%); 
+        text-decoration: underline;
+    }
+
 
 header, footer {
     background-color: $primary-color;
