@@ -95,12 +95,12 @@ main-nav a {
 
 /*--Desktop - Srch form Flex format--*/
 .search-form {
-    display: flex; // in and button side-by-side
+    display: flex; /* in and button side-by-side */
     gap: 10px;
     margin-bottom: 30px;
 
     input[type="search"] {
-        flex-grow: 1; // in field takes up max space
+        flex-grow: 1; /* in field takes up max space */
         padding: 10px;
         border: 2px solid $border-color;
         border-radius: 5px;
