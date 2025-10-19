@@ -46,12 +46,12 @@ a {
     color: $accent-color;
     text-decoration: none;
     transition: color 0.3s ease;
-}
 //make sure hover rule is nested inside 'a' rule
     &:hover {
         color: darken($accent-color, 15%); 
         text-decoration: underline;
     }
+} 
 
 
 header, footer {
@@ -77,22 +77,20 @@ header, footer {
     font-size: 1.6em;
 }
 
-main-nav {
+.main-nav {
     display: flex;
     gap: 20px;
     list-style: none;
     margin: 0;
     padding: 0;
 
-}
-
-main-nav a {
+    a {
     color: #ffffff;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
+    }
 }
-
 //Desktop - Srch form Flex format
 .search-form {
     display: flex; //in and button side-by-side
