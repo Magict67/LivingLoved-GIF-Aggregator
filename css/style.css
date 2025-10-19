@@ -103,4 +103,34 @@ header, footer {
 }
 .search-form button:hover {
   background-color: rgb(127.4832214765, 182.5167785235, 177.1476510067);
+}
+
+.gif-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: flex-start;
+}
+
+.gif-item {
+  flex-basis: calc(33.333% - 10px);
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.gif-item img {
+  width: 100%;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+
+.placeholder-text {
+  text-align: center;
+  width: 100%;
+  color: #95a5a6;
+  font-style: italic;
+  padding: 50px 0;
 }/*# sourceMappingURL=style.css.map */
