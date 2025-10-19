@@ -150,3 +150,35 @@ header, footer {
     font-style: italic;
     padding: 50px 0;
 }
+
+//mobile flexibility
+//small screens (320px and below)
+@media (max-width: 600px) {
+    
+    // 10) The site title and navbar stack vertically
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    // 11) Vert nav items
+    .main-nav ul {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .search-form {
+        flex-direction: column; // ver search and button
+        
+        input[type="search"], button {
+            width: 100%;
+        }
+    }
+    
+    // 12) Images stack
+    .gif-item {
+        flex-basis: 100%; // wide items (one per row)
+    }
+}

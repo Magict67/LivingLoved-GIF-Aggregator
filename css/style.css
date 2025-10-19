@@ -133,4 +133,26 @@ header, footer {
   color: #95a5a6;
   font-style: italic;
   padding: 50px 0;
+}
+
+@media (max-width: 600px) {
+  .header-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .main-nav ul {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    margin-top: 15px;
+  }
+  .search-form {
+    flex-direction: column;
+  }
+  .search-form input[type=search], .search-form button {
+    width: 100%;
+  }
+  .gif-item {
+    flex-basis: 100%;
+  }
 }/*# sourceMappingURL=style.css.map */
