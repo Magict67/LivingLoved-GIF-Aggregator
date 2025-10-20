@@ -151,18 +151,18 @@ header, footer {
     padding: 50px 0;
 }
 
-//mobile flexibility
+//mobile flex
 //small screens (320px and below)
 @media (max-width: 600px) {
     
-    // 10) The site title and navbar stack vertically
+    // The site title and navbar stack vertically
     .header-content {
         flex-direction: column;
         text-align: center;
     }
 
     // 11) Vert nav items
-    .main-nav ul {
+    .main-nav ul {  //html makes this a ul already do I need to change?
         flex-direction: column;
         gap: 10px;
         width: 100%;
