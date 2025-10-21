@@ -11,4 +11,7 @@ $(document) .ready(function() {
             alert("Please enter an inspirational term.");
             return;
         }
-
+imageGrid.empty().append('<p class="placeholder-text">Searching for ' + searchTerm + '...</p>');
+fetchGifs(searchTerm);
+    });
+});
