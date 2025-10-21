@@ -15,3 +15,5 @@ imageGrid.empty().append('<p class="placeholder-text">Searching for ' + searchTe
 fetchGifs(searchTerm);
     });
 });
+function fetchGifs(searchTerm) {
+    const requestURL = `${GIPHY_SEARCH_ENDPOINT}
