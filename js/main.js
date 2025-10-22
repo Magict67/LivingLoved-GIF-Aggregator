@@ -1,3 +1,4 @@
+//Trying to clear VSC main.js 9+ when there is nothing there 
 const GIPHY_API_KEY = "UVBmEU4lOuwzYVfQEP5Oal9XcyRfdXSs";
 const GIPHY_SEARCH_ENDPOINT = "https://api.giphy.com/v1/gifs/search";
 const RESULTS_LIMIT = 24; //15 is enough though
