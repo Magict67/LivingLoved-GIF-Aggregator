@@ -16,4 +16,45 @@ fetchGifs(searchTerm);
     });
 });
 function fetchGifs(searchTerm) {
-    const requestURL = `${GIPHY_SEARCH_ENDPOINT}
+    const requestURL = `${GIPHY_SEARCH_ENDPOINT}api_key=${GIPHY_API_KEY}&q=${searchTerm}&limit=${RESULTS_LIMIT}`;
+    console.log("Making API Request to:", requestURL);
+  {
+        url: requestURL,
+        method: "GET", // ask for data
+        dataType: "json", // data back as JSON object
+        
+{
+            console.log("Giphy Response Received:", response);
+
+            imageGrid.empty();
+
+            // Iterate returned and display
+            if (response.data && response.data.length > 0) {
+                response.data.forEach(gifObject => {
+                    // image URL in returned JSON
+                    const imageUrl = gifObject.images.fixed_height.url;
+                    const gifTitle = gifObject.title || "Inspirational GIF";
+                    
+                    // make display image append
+                    const htmlContent = `
+                        <div class="gif-item">
+                            <img src="${imageUrl}" alt="${gifTitle}">
+                        </div>
+                    `;
+                    
+                    // Append to the screen
+                    imageGrid.append(htmlContent);
+                });
+            } else {
+                // display if nothing found
+                imageGrid.append('<p class="placeholder-text">Nothing Found. Try another word like "Faith" or "Community."</p>');
+            }
+        },
+        
+        // Error function (input incomplete, wrong API key, network error etc.)
+        error: function(jqXHR, textStatus, errorThrown) {
+            console.error("API Error:", textStatus, errorThrown);
+            imageGrid.empty().append('<p class="placeholder-text error-message">Sorry, we found an image connection error. Check your API key!</p>');
+        }
+    });
+}
