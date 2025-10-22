@@ -16,13 +16,13 @@ fetchGifs(searchTerm);
     });
 });
 function fetchGifs(searchTerm) {
-    const requestURL = \GIPHY`SEARCH`ENDPOINT'?api key={GIPHY_API_KEY}&q=${searchTerm}&limit=${RESULTS_LIMIT}';
+    const requestURL ={GIPHY_API_KEY}&q=${searchTerm}&limit=${RESULTS_LIMIT};
     console.log("Making API Request to:", requestURL);
-  {
+  $.ajax({
         url: requestURL,
         method: "GET", // ask for data
         dataType: "json", // data back as JSON object
-        
+        success: function(response)
 {
             console.log("Giphy Response Received:", response);
 
@@ -44,7 +44,9 @@ function fetchGifs(searchTerm) {
                     
                     // Append to the screen
                     imageGrid.append(htmlContent);
+            JavaScript        
                 });
+            }
             } else {
                 // display if nothing found
                 imageGrid.append('<p class="placeholder-text">Nothing Found. Try another word like "Faith" or "Community."</p>');
