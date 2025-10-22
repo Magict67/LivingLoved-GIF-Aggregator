@@ -1,6 +1,6 @@
-const GIPHY_API_KEY = UVBmEU4lOuwzYVfQEP5Oal9XcyRfdXSs;
-const GIPHY_API_URL = https://api.giphy.com/v1/gifs/search;
-const results_limit = 15; //15 is enough
+const GIPHY_API_KEY = "UVBmEU4lOuwzYVfQEP5Oal9XcyRfdXSs";
+const GIPHY_SEARCH_ENDPOINT = "https://api.giphy.com/v1/gifs/search";
+const RESULTS_LIMIT = 24; //15 is enough though
 const imageGrid = $ ("#image-grid");
 $(document) .ready(function() {
     console.log("Website is ready! Listening for search submissions......");
@@ -16,7 +16,7 @@ fetchGifs(searchTerm);
     });
 });
 function fetchGifs(searchTerm) {
-    const requestURL = `${GIPHY_SEARCH_ENDPOINT}api_key=${GIPHY_API_KEY}&q=${searchTerm}&limit=${RESULTS_LIMIT}`;
+    const requestURL = \GIPHY`SEARCH`ENDPOINT'?api key={GIPHY_API_KEY}&q=${searchTerm}&limit=${RESULTS_LIMIT}';
     console.log("Making API Request to:", requestURL);
   {
         url: requestURL,
