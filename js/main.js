@@ -9,7 +9,7 @@ $(document) .ready(function() {
         const searchTerm = $("#search-term") .val().trim();
         if (searchTerm === "") {
             alert("Please enter an inspirational term.");
-            return;
+            return;s
         }
 imageGrid.empty().append('<p class="placeholder-text">Searching for ' + searchTerm + '...</p>');
 fetchGifs(searchTerm);
