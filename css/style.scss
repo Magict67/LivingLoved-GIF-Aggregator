@@ -137,8 +137,8 @@ header, footer {
     
     img {
         width: 100%;
-        height: 200px; // Fixed height for a uniform look
-        object-fit: cover; // Ensures the image covers the box without stretching
+        height: 200px; // Fixed height
+        object-fit: cover; // Ensures the image covers no stretching
         display: block;
     }
 }
@@ -155,7 +155,7 @@ header, footer {
 //small screens (320px and below)
 @media (max-width: 600px) {
     
-    // The site title and navbar stack vertically
+    // site title and navbar stack vertically
     .header-content {
         flex-direction: column;
         text-align: center;
@@ -177,7 +177,7 @@ header, footer {
         }
     }
     
-    // 12) Images stack
+    //Images stack
     .gif-item {
         flex-basis: 100%; // wide items (one per row)
     }
