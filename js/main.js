@@ -44,8 +44,8 @@ function fetchGifs(searchTerm) {
                     
                     // Append to the screen
                     imageGrid.append(htmlContent);
-            JavaScript        
-                });
+            JavaScript}        
+            });
             }
             } else {
                 // display if nothing found
