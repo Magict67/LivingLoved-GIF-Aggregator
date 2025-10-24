@@ -16,7 +16,7 @@ fetchGifs(searchTerm);
     });
 });
 function fetchGifs(searchTerm) {
-    const requestURL ={GIPHY_API_KEY}&q=${searchTerm}&limit=${RESULTS_LIMIT};
+   const requestURL = `https://api.giphy.com/v1/gifs/search?api_key=${GIPHY_API_KEY}&q=${encodeURIComponent(searchTerm)}&limit=${RESULTS_LIMIT}`; 
     console.log("Making API Request to:", requestURL);
   $.ajax({
         url: requestURL,
