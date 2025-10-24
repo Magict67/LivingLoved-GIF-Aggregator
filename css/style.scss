@@ -161,9 +161,9 @@ header, footer {
         text-align: center;
     }
 
-    // Vert nav items
-    .main-nav {   //html makes this a ul already do I need to change?
-        flex-direction: column;
+    
+    .main-nav {   
+        flex-direction: column; // Vert nav items
         gap: 10px;
         width: 100%;
         margin-top: 15px;
