@@ -140,7 +140,7 @@ header, footer {
     flex-direction: column;
     text-align: center;
   }
-  .main-nav ul {
+  .main-nav {
     flex-direction: column;
     gap: 10px;
     width: 100%;

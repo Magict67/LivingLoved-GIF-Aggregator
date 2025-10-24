@@ -162,7 +162,7 @@ header, footer {
     }
 
     // 11) Vert nav items
-    .main-nav ul {  //html makes this a ul already do I need to change?
+    .main-nav {   //html makes this a ul already do I need to change?
         flex-direction: column;
         gap: 10px;
         width: 100%;
