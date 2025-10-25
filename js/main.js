@@ -1,34 +1,36 @@
 const GIPHY_API_KEY = "UVBmEU4lOuwzYVfQEP5Oal9XcyRfdXSs";
 const GIPHY_SEARCH_ENDPOINT = "https://api.giphy.com/v1/gifs/search";
-const RESULTS_LIMIT = 24; //15 is enough though
+const RESULTS_LIMIT = 24; 
 const imageGrid = $ ("#image-grid");
-$(document) .ready(function() {
+
+$(document).ready(function() {
     console.log("Website is ready! Listening for search submissions......");
-    $("#gif-search-form") .on("submit", function(event) {
+    $("#gif-search-form").on("submit", function(event) {
         event.preventDefault();
-        const searchTerm = $("#search-term") .val().trim();
+        const searchTerm = $("#search-term").val().trim();
         if (searchTerm === "") {
             alert("Please enter an inspirational term.");
             return;
         }
-imageGrid.empty().append('<p class="placeholder-text">Searching for ' + searchTerm + '...</p>');
-fetchGifs(searchTerm);
+        imageGrid.empty().append('<p class="placeholder-text">Searching for ' + searchTerm + '...</p>');
+        fetchGifs(searchTerm);
     });
 });
+
 function fetchGifs(searchTerm) {
    const requestURL = `https://api.giphy.com/v1/gifs/search?api_key=${GIPHY_API_KEY}&q=${encodeURIComponent(searchTerm)}&limit=${RESULTS_LIMIT}`; 
     console.log("Making API Request to:", requestURL);
-  $.ajax({
+  
+    $.ajax({
         url: requestURL,
         method: "GET", // ask for data
         dataType: "json", // data back as JSON object
-        success: function(response)
-{
+        success: function(response) {
             console.log("Giphy Response Received:", response);
 
             imageGrid.empty();
 
-            // Iterate returned and display
+            // Iterate returned data and display
             if (response.data && response.data.length > 0) {
                 response.data.forEach(gifObject => {
                     // image URL in returned JSON
@@ -44,14 +46,12 @@ function fetchGifs(searchTerm) {
                     
                     // Append to the screen
                     imageGrid.append(htmlContent);
-            JavaScript}        
-            });
-            }
+                }); // <-- THIS CLOSES THE forEach LOOP CORRECTLY
             } else {
                 // display if nothing found
                 imageGrid.append('<p class="placeholder-text">Nothing Found. Try another word like "Faith" or "Community."</p>');
             }
-        },
+        }, // <-- THIS CLOSES THE success function CORRECTLY
         
         // Error function (input incomplete, wrong API key, network error etc.)
         error: function(jqXHR, textStatus, errorThrown) {
